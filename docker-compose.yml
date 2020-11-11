@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  front:
+    restart: "unless-stopped"
+    build:
+      context: ./
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - "80:80"
+      - "443:443"
